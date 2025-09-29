@@ -1,12 +1,12 @@
-👓 Blind Aid Glasses – Banknote Recognition + Text Reader
+# 👓 Blind Aid Glasses – Banknote Recognition + Text Reader
 
 This project is part of the Blind Aid Glasses system, designed to help visually impaired users interact with their environment.
 
 It integrates:
 
-💵 Banknote Recognition → Detects and classifies Egyptian banknotes in real time using a YOLOv8 detector (for background removal) and a ResNet50 classifier (for denomination recognition).
+💵 **Banknote Recognition** → Detects and classifies Egyptian banknotes in real time using a YOLOv8 detector (for background removal) and a ResNet50 classifier (for denomination recognition).
 
-📖 Text Reader → Reads printed or handwritten text in Arabic and English using OCR (Tesseract) and outputs it as speech feedback.
+📖 **Text Reader** → Reads printed or handwritten text in Arabic and English using OCR (Tesseract) and outputs it as speech feedback.
 
 The project is optimized for real-time use on laptops and embedded devices (e.g., Raspberry Pi)# 💵 Banknote Recognition System (YOLOv8 + ResNet50)
 
