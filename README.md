@@ -118,3 +118,4 @@ python arabic and english text reader.py
 ## 📌 Links
 - Dataset for YOLOV8: https://universe.roboflow.com/custom-yolov8-ihpb2/new-egyptian-currency/dataset/3
 - Dataset for ResNet50:
+- Tesseract OCR for Windows: https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe
