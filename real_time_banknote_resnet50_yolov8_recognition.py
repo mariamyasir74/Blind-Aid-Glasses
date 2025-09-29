@@ -10,13 +10,14 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 import tensorflow as tf
+from tensorflow.keras import models
 from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
 
-CLASS_NAMES = ['10', '100', '20', '200', '5', '50']
-yolo = YOLO("runs/train/banknote_yolov8n/weights/best.pt")
-resnet_model = tf.keras.models.load_model("ResNet50.h5")
+CLASSES = ['10', '100', '20', '200', '5', '50']
+yolo = YOLO(r"D:\Mariam Graduation project\Blind Aid Glasses\runs\train\banknote_yolov8n\weights\best.pt")
+resnet_model = models.load_model(r"D:\Mariam Graduation project\Blind Aid Glasses\ResNet50.h5")
 # If your ResNet outputs logits, we'll apply softmax. We'll treat output as probabilities.
 
 def classify_crop(crop_bgr):
@@ -48,7 +49,7 @@ def classify_crop(crop_bgr):
     # Get best class
     best_idx = np.argmax(probs)
     best_prob = float(probs[best_idx])
-    label = CLASS_NAMES[best_idx] if best_idx < len(CLASS_NAMES) else str(best_idx)
+    label = CLASSES[best_idx] if best_idx < len(CLASSES) else str(best_idx)
     return label, best_prob
 
 def draw_label_box(frame, box, text, conf, color=(0, 255, 0)):

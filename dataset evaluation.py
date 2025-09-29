@@ -22,7 +22,7 @@ plt.savefig('Class Distribution.png')
 plt.show()
 # 2. Blurry Image Detection
 
-def is_blurry(image_path, threshold=100):
+def is_blurry(image_path, threshold=50):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     if img is None:
         return True, 0
@@ -37,8 +37,6 @@ for cls in os.listdir(DATASET_PATH):
         if blurry:
             blurry_images.append((path, score))
 print(f"Found {len(blurry_images)} blurry images")
-if blurry_images:
-    print("Example blurry:", blurry_images[:5])
 # 3. Duplicate Image Detection
 hashes = {}
 duplicates = []
@@ -54,8 +52,6 @@ for cls in os.listdir(DATASET_PATH):
         except:
             continue
 print(f"Found {len(duplicates)} duplicate pairs")
-if duplicates:
-    print("Example duplicates:", duplicates[:3])
 # 4. Image Size Check
 sizes = []
 for cls in os.listdir(DATASET_PATH):

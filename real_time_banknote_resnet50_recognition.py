@@ -45,7 +45,7 @@ while True:
         prediction = model.predict(image, verbose=0)[0]
         class_index = np.argmax(prediction)
         confidence = prediction[class_index]
-        if Labels[class_index] != "none" and confidence >= 0.60:
+        if Labels[class_index] != "none" and confidence > 0.50:
             draw_label(frame, f'Label: {Labels[class_index]} ({confidence * 100:.1f}%)', (20, 20),
                        (255, 0, 0))
             async_speech((Labels_ar[class_index]))
