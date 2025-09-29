@@ -10,27 +10,6 @@ It integrates:
 
 The project is optimized for real-time use on laptops and could simply be modified to be deployed on embedded devices (e.g., Raspberry Pi).
 
-## 📂 Project Structure
-├── dataset/                        # Raw dataset (banknote images)
-├── dataset_multiclass_unsplit/     # Processed dataset (organized by class)
-├── runs/                           # YOLOv8 training results
-|
-├── dataset evaluation.py           # Dataset quality analysis
-|
-├── train_banknote_resnet50.py      # Train ResNet50 classifier
-├── train_banknote_yolov8.py        # Train YOLOv8 detector
-│
-├── evaluate resnet50 model.py      # Evaluate ResNet50 model
-├── evaluate yolov8 model.py        # Evaluate YOLOv8 model
-│
-├── real_time_banknote_resnet50_recognition.py       # ResNet50-only pipeline
-├── real_time_banknote_yolov8_detection.py           # YOLOv8-only pipeline
-├── real_time_banknote_resnet50_yolov8_recognition.py# YOLOv8+ResNet50 pipeline
-│
-├── arabic and english text reader.py # OCR + TTS module (Arabic/English)
-│
-└── yolov8n.pt                      # YOLOv8 model used for training
-
 ---
 
 ## ⚙️ Installation
@@ -131,6 +110,7 @@ python real_time_banknote_resnet50_yolov8_recognition.py
 ```bash
 python arabic and english text reader.py
 ```
+
 ---
 
 ## 📌 Links
