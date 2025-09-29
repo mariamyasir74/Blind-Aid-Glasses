@@ -106,7 +106,9 @@ python real_time_banknote_yolov8_detection.py
 python real_time_banknote_resnet50_yolov8_recognition.py
 ```
 
-📖 **Text Reader (Arabic & English)**
+---
+
+## 📖 Text Reader (Arabic & English)
 ```bash
 python arabic and english text reader.py
 ```
