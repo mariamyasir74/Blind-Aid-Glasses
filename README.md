@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📊 Dataset Evaluation
+## 📊 Dataset Analysis
 
 - **Dataset Evaluation**
 ```bash
