@@ -1,0 +1,10 @@
+tensorflow
+ultralytics
+opencv-python
+numpy
+pandas
+matplotlib
+scikit-learn
+pytesseract
+pyttsx3
+seaborn
