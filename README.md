@@ -66,30 +66,29 @@ sudo apt install tesseract-ocr
 python dataset evaluation.py
 ```
 
-<img width="1645" height="235" alt="dataset analysis" src="https://github.com/user-attachments/assets/9d45a8e6-0e62-43ce-801a-7caadae90138" />
-
-<img width="640" height="480" alt="Class Distribution" src="https://github.com/user-attachments/assets/591778eb-11e8-4775-a8e9-5e63c9bcc8e8" />
-
-<img width="1500" height="800" alt="Random Samples per Class" src="https://github.com/user-attachments/assets/7f28dfc6-1ce3-46c0-8663-16bedf8ed925" />
-
-<img width="1000" height="800" alt="t-SNE Visualization" src="https://github.com/user-attachments/assets/847d496f-8990-479f-9143-b49e6d57d376" />
-
-- **Spli Dataset**
+- **Split Dataset**
 ```bash
 python split dataset.py
 ```
+<img width="1759" height="199" alt="dataset analysis" src="https://github.com/user-attachments/assets/cff7f84a-1315-45f5-80e6-0f8a6b3cbed6" />
+
+<img width="640" height="480" alt="Class Distribution" src="https://github.com/user-attachments/assets/278cc9a6-9a8f-4b72-a770-ec54ef3d69c6" />
+
+<img width="1500" height="800" alt="Random Samples per Class" src="https://github.com/user-attachments/assets/58f44dd5-52ac-460d-b687-e8fb3247a806" />
+
+<img width="1000" height="800" alt="t-SNE Visualization" src="https://github.com/user-attachments/assets/26c155ff-f9fc-4db1-aa8a-bd36bf01146f" />
 
 ## 🏋️ Training
-- **Train ResNet50 Classifier**
-```bash
-python train_banknote_resnet50.py
-```
 - **Train YOLOv8 Detector**
+- Trained using [annotated Egyptian banknote dataset](https://universe.roboflow.com/custom-yolov8-ihpb2/new-egyptian-currency/dataset/3)
 ```bash
 python train_banknote_yolov8.py
 ```
-
----
+- **Train ResNet50 Classifier**
+- Trained using [My Dataset](https://drive.google.com/drive/folders/1Mcj6llWgcMYfIPrwipf6yh_PPNnlBQ0v?usp=sharing). Collected, cleaned and modified from other datasets and open sources on the internet.
+```bash
+python train_banknote_resnet50.py
+```
 
 ## 📈 Models Evaluation
 - **ResNet50**
@@ -146,8 +145,5 @@ python arabic and english text reader.py
 ---
 
 ## 📌 Links
-- Dataset for **YOLOV8**: https://universe.roboflow.com/custom-yolov8-ihpb2/new-egyptian-currency/dataset/3
-- Dataset for **ResNet50**: https://drive.google.com/drive/folders/1Mcj6llWgcMYfIPrwipf6yh_PPNnlBQ0v?usp=sharing
 - **ResNet50** model: https://drive.google.com/file/d/1Ldt3lQMfvNhAO7tL-hjy59G0sk4aicAY/view?usp=sharing
 - **YOLOV8** model: https://drive.google.com/file/d/1gcZOhXdYCZAX6js_99XxBRLTM546G9Ub/view?usp=sharing
-- **Tesseract OCR** for Windows: https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe
