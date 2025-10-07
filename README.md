@@ -4,7 +4,7 @@ This project provides a real-time assistive vision system for the visually impai
 
 ## 🧠 Features
 
-## 💵 Banknote Recognition
+💵 **Banknote Recognition**
 
 - Detects and classifies Egyptian banknotes in real time.
 - Uses a YOLOv8 detection model to locate the banknote in the camera frame.
@@ -12,18 +12,16 @@ This project provides a real-time assistive vision system for the visually impai
 - Supports denominations: 5, 10, 20, 50, 100, 200 EGP.
 - Provides audio feedback to inform the user of the recognized banknote value.
 
-## 📖 Text Reader (OCR)
+📖 **Text Reader (OCR)**
 
 - Reads both Arabic and English text using Tesseract OCR.
 - Converts captured text to speech in the correct language using a voice feedback system.
 
-## ⚙️ Key System Capabilities
+⚙️ **Key System Capabilities**
 
 - Real-time camera-based recognition and voice output.
 - Works seamlessly on Raspberry Pi with a connected camera and speaker.
-
----
-
+## 🧩 Models Used
 | Model                     | Purpose                 | Framework            | Notes                         |
 | ------------------------- | ----------------------- | -------------------- | ----------------------------- |
 | **YOLOv8n**               | Banknote detection      | Ultralytics          | Detects banknotes in frame    |
