@@ -2,8 +2,6 @@
 
 This project provides a real-time assistive vision system for the visually impaired, capable of recognizing banknotes and reading Arabic & English text aloud using deep learning and computer vision techniques
 
----
-
 ## 🧠 Features
 
 ## 💵 Banknote Recognition
@@ -24,14 +22,8 @@ This project provides a real-time assistive vision system for the visually impai
 - Real-time camera-based recognition and voice output.
 - Works seamlessly on Raspberry Pi with a connected camera and speaker.
 
-Camera Frame
-   ↓
-YOLOv8 Detection  ---> Cropped Banknote
-                         ↓
-                 ResNet50 Classification
-                         ↓
-                 Voice Feedback (Value)
 ---
+
 | Model                     | Purpose                 | Framework            | Notes                         |
 | ------------------------- | ----------------------- | -------------------- | ----------------------------- |
 | **YOLOv8n**               | Banknote detection      | Ultralytics          | Detects banknotes in frame    |
