@@ -74,7 +74,7 @@ def show_samples(dataset_path, samples_per_class=5):
         chosen = random.sample(files, min(samples_per_class, len(files)))
         for j, fname in enumerate(chosen):
             path = os.path.join(dataset_path, cls, fname)
-            img = Image.open(path).convert("RGB").resize((128, 128))
+            img = Image.open(path).convert("RGB").resize((224, 224))
             plt.subplot(len(classes), samples_per_class, i*samples_per_class + j + 1)
             plt.imshow(img)
             plt.axis("off")
@@ -104,7 +104,7 @@ def extract_features(dataset_path, img_size=(64,64), max_images=500):
                 continue
     return np.array(X), np.array(y)
 
-X, y = extract_features(DATASET_PATH, max_images=1000)
+X, y = extract_features(DATASET_PATH, max_images=900)
 print("Feature matrix shape:", X.shape)
 X_scaled = StandardScaler().fit_transform(X)
 pca = PCA(n_components=50).fit_transform(X_scaled)

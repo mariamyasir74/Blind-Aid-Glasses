@@ -4,12 +4,13 @@ import pyttsx3
 import threading
 import tensorflow as tf
 from tensorflow.keras import models
+from tensorflow.keras.applications import resnet50
 
 def speak_arabic(audio):
     engine = pyttsx3.init()
     engine.setProperty('rate', 200)
     engine.setProperty('voice',
-                       'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_arSA_NaayfM')
+                       r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_arSA_NaayfM')
     engine.say(audio)
     engine.runAndWait()
 
@@ -26,7 +27,7 @@ def draw_label(img, text, pos, bg_color):
     cv2.putText(img, text, pos, fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=0.5, color=(0, 0, 0), thickness=2,
                 lineType=cv2.LINE_AA)
 
-model = models.load_model('ResNet50.h5')
+model = models.load_model('ResNet50_banknote.h5')
 Labels = ["Ten", "One Hundred", "Twenty", "Two Hundred", "Five", "Fifty"]
 Labels_ar = ['عشرة جنيه', 'مئة جنيه', 'عشرون جنيه', 'مئتاا جنيه', 'خمسة جنيه', 'خمسون جنيه']
 cap = cv2.VideoCapture(0)
@@ -41,7 +42,7 @@ while True:
     try:
         image = cv2.resize(frame, (224, 224))
         image = np.expand_dims(image, axis=0)
-        image = tf.keras.applications.resnet50.preprocess_input(image)
+        image = resnet50.preprocess_input(image)
         prediction = model.predict(image, verbose=0)[0]
         class_index = np.argmax(prediction)
         confidence = prediction[class_index]

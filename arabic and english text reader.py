@@ -2,8 +2,8 @@ import cv2
 import pytesseract
 from pytesseract import Output
 import pyttsx3
-pytesseract.pytesseract.tesseract_cmd = 'D:/Tesseract-OCR/tesseract.exe'
 
+pytesseract.pytesseract.tesseract_cmd = 'D:/Tesseract-OCR/tesseract.exe'
 
 def speak(audio):
     engine = pyttsx3.init()
@@ -12,15 +12,13 @@ def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
-
 def speak_arabic(audio):
     engine = pyttsx3.init()
     engine.setProperty('rate', 200)
     engine.setProperty('voice',
-                       'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_arSA_NaayfM')
+                       r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_arSA_NaayfM')
     engine.say(audio)
     engine.runAndWait()
-
 
 def correct_arabic_text(text):
     corrections = {
@@ -71,7 +69,6 @@ def correct_arabic_text(text):
     for wrong, correct in corrections.items():
         text = text.replace(wrong, correct)
     return text
-
 
 cap = cv2.VideoCapture(0)
 print("Real-time Multilingual OCR started. Press 'q' to quit.")

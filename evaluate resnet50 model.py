@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import cv2
 import tensorflow as tf
+from tensorflow.keras.applications import resnet50
 from tensorflow.keras.models import load_model
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.manifold import TSNE
@@ -12,11 +13,10 @@ import os
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 train_valid_dir = os.path.join(THIS_FOLDER, "dataset_multiclass/train_valid")
 test_dir = os.path.join(THIS_FOLDER, "dataset_multiclass/test")
-test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
-    preprocessing_function=tf.keras.applications.resnet50.preprocess_input)
+test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(preprocessing_function=resnet50.preprocess_input)
 test_images = test_datagen.flow_from_directory(directory=test_dir, target_size=(224, 224), color_mode='rgb',
                                                batch_size=32, class_mode='categorical', shuffle=False)
-model = load_model(os.path.join(THIS_FOLDER, "ResNet50.h5"))
+model = load_model(os.path.join(THIS_FOLDER, "ResNet50_banknote.h5"))
 y_true = test_images.classes
 y_pred_probs = model.predict(test_images, verbose=1)
 y_pred = np.argmax(y_pred_probs, axis=1)
@@ -32,7 +32,7 @@ plt.savefig('ResNet50 Confusion Matrix.png')
 plt.show()
 
 def visualize_tsne(train_valid_dir):
-    feature_extractor = tf.keras.applications.resnet50.ResNet50(include_top=False, pooling='avg', weights='imagenet')
+    feature_extractor = resnet50.ResNet50(include_top=False, pooling='avg', weights='imagenet')
     features, labels = [], []
     for class_label in os.listdir(train_valid_dir):
         class_dir = os.path.join(train_valid_dir, class_label)
@@ -42,7 +42,7 @@ def visualize_tsne(train_valid_dir):
             if img is None: continue
             img = cv2.resize(img, (224, 224))
             img = np.expand_dims(img, axis=0)
-            img = tf.keras.applications.resnet50.preprocess_input(img)
+            img = resnet50.preprocess_input(img)
             feature = feature_extractor.predict(img)
             features.append(feature.flatten())
             labels.append(class_label)

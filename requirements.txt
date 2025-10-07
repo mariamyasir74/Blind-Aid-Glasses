@@ -8,3 +8,5 @@ scikit-learn
 pytesseract
 pyttsx3
 seaborn
+pillow
+pickle
