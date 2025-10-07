@@ -23,6 +23,7 @@ This project provides a real-time assistive vision system for the visually impai
 - Works seamlessly on Raspberry Pi with a connected camera and speaker.
 
 ## 🧩 Models Used
+
 | Model                     | Purpose                 | Framework            | Notes                         |
 | ------------------------- | ----------------------- | -------------------- | ----------------------------- |
 | **YOLOv8n**               | Banknote detection      | Ultralytics          | Detects banknotes in frame    |
@@ -73,7 +74,10 @@ python dataset evaluation.py
 
 <img width="1000" height="800" alt="t-SNE Visualization" src="https://github.com/user-attachments/assets/847d496f-8990-479f-9143-b49e6d57d376" />
 
----
+- **Spli Dataset**
+```bash
+python split dataset.py
+```
 
 ## 🏋️ Training
 - **Train ResNet50 Classifier**
