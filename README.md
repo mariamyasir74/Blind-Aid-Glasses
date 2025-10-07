@@ -123,6 +123,7 @@ python arabic and english text reader.py
 - **ResNet50** model: https://drive.google.com/file/d/1AqiKLcQ0rUF1UgtgCEKHO-RMtUi6OVbs/view?usp=sharing
 - **YOLOV8** model: https://drive.google.com/file/d/1gcZOhXdYCZAX6js_99XxBRLTM546G9Ub/view?usp=sharing
 ## 🙌 Attributions
+- [Team SeeBeyond](https://github.com/Team-SeeBeyond)
 - [Belal Safy](https://www.kaggle.com/belalsafy)
 - [custom yolov8](https://universe.roboflow.com/custom-yolov8-ihpb2/new-egyptian-currency/dataset/3)
 - [Capstone](https://universe.roboflow.com/capstone-1vnr9/egyptian-banknote00/dataset/2)
