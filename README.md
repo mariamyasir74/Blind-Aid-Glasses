@@ -1,16 +1,36 @@
-# 👓 Blind Aid Glasses – Banknote Recognition + Text Reader
+# 🕶️ Blind Aid Glasses
 
-This project is part of the Blind Aid Glasses system, designed to help visually impaired users interact with their environment.
-
-It integrates:
-
-💵 **Banknote Recognition** → Detects and classifies Egyptian banknotes in real time using a **YOLOv8** detector (for background removal) and a **ResNet50** classifier (for denomination recognition).
-
-📖 **Text Reader** → Reads printed or handwritten text in **Arabic** and **English** using OCR (Tesseract) and outputs it as speech feedback.
-
-The project is optimized for real-time use on laptops and could simply be modified to be deployed on embedded devices (e.g., Raspberry Pi).
+This project provides a real-time assistive vision system for the visually impaired, capable of recognizing banknotes and reading Arabic & English text aloud using deep learning and computer vision techniques
 
 ---
+
+## 🧠 Features
+
+## 💵 Banknote Recognition
+
+- Detects and classifies Egyptian banknotes in real time.
+- Uses a YOLOv8 detection model to locate the banknote in the camera frame.
+- Extracted region is passed to a fine-tuned ResNet50 model for accurate denomination recognition.
+- Supports denominations: 5, 10, 20, 50, 100, 200 EGP.
+- Provides audio feedback to inform the user of the recognized banknote value.
+
+## 📖 Text Reader (OCR)
+
+- Reads both Arabic and English text using Tesseract OCR.
+- Converts captured text to speech in the correct language using a voice feedback system.
+
+## ⚙️ Key System Capabilities
+
+- Real-time camera-based recognition and voice output.
+- Works seamlessly on Raspberry Pi with a connected camera and speaker.
+
+---
+| Model                     | Purpose                 | Framework            | Notes                         |
+| ------------------------- | ----------------------- | -------------------- | ----------------------------- |
+| **YOLOv8n**               | Banknote detection      | Ultralytics          | Detects banknotes in frame    |
+| **ResNet50 (Fine-tuned)** | Banknote classification | TensorFlow/Keras     | Classifies detected banknote  |
+| **Tesseract OCR**         | Text recognition        | OpenCV + pytesseract | Reads Arabic and English text |
+| **pyttsx3**               | Speech feedback         | Python               | Converts predictions to voice |
 
 ## ⚙️ Installation
 
