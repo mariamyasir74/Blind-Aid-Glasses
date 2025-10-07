@@ -24,6 +24,13 @@ This project provides a real-time assistive vision system for the visually impai
 - Real-time camera-based recognition and voice output.
 - Works seamlessly on Raspberry Pi with a connected camera and speaker.
 
+Camera Frame
+   ↓
+YOLOv8 Detection  ---> Cropped Banknote
+                         ↓
+                 ResNet50 Classification
+                         ↓
+                 Voice Feedback (Value)
 ---
 | Model                     | Purpose                 | Framework            | Notes                         |
 | ------------------------- | ----------------------- | -------------------- | ----------------------------- |
