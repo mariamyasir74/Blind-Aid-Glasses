@@ -21,6 +21,7 @@ This project provides a real-time assistive vision system for the visually impai
 
 - Real-time camera-based recognition and voice output.
 - Works seamlessly on Raspberry Pi with a connected camera and speaker.
+
 ## 🧩 Models Used
 | Model                     | Purpose                 | Framework            | Notes                         |
 | ------------------------- | ----------------------- | -------------------- | ----------------------------- |
@@ -29,12 +30,12 @@ This project provides a real-time assistive vision system for the visually impai
 | **Tesseract OCR**         | Text recognition        | OpenCV + pytesseract | Reads Arabic and English text |
 | **pyttsx3**               | Speech feedback         | Python               | Converts predictions to voice |
 
-## ⚙️ Installation
+## 🔧 Installation
 
 1. **Clone the repo**
 ```bash
 git clone https://github.com/mariamyasir74/Blind-Aid-Glasses.git
-cd blind-aid-glasses
+cd Blind-Aid-Glasses
 ```
 2. **Create a virtual environment**
 ```bash
@@ -46,8 +47,14 @@ source .venv/bin/activate  # Linux/Mac
 ```bash
 pip install -r requirements.txt
 ```
-
----
+4. **Install Tesseract OCR**
+🪟 **Windows**:
+- Download and install from: Tesseract OCR
+- Add the installation path to your system environment variables.
+🐧 **Linux**:
+```bash
+sudo apt install tesseract-ocr
+```
 
 ## 📊 Dataset Analysis
 
