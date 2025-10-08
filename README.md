@@ -12,7 +12,7 @@ This project provides a real-time assistive vision system for the visually impai
 📖 **Text Reader (OCR)**
 - Reads both Arabic and English text using Tesseract OCR.
 - Converts captured text to speech in the correct language using a voice feedback system.
-- 
+
 ⚙️ **Key System Capabilities**
 - Real-time camera-based recognition and voice output.
 - Works seamlessly on Raspberry Pi with a connected camera and speaker.
