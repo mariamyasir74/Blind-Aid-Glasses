@@ -42,6 +42,7 @@ source .venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 4. **Install Tesseract OCR**
+
 🪟 **Windows**:
 - Download and install from: [Tesseract OCR](https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe)
 - Add the installation path to your system environment variables.
