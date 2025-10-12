@@ -121,8 +121,7 @@ python arabic and english text reader.py
 - The system provides spoken feedback for every recognized banknote or text segment.
 - You can adjust the speech speed, pitch, or language in the TTS configuration section.
 ## 📌 Links
-- **ResNet50** model: https://drive.google.com/file/d/1AqiKLcQ0rUF1UgtgCEKHO-RMtUi6OVbs/view?usp=sharing
-- **YOLOV8** model: https://drive.google.com/file/d/1gcZOhXdYCZAX6js_99XxBRLTM546G9Ub/view?usp=sharing
+- [ResNet50 & YOLOv8 models](https://www.kaggle.com/models/mariamyasir/egyptian-banknote-recognition-models)
 ## 🙌 Attributions
 - [Team SeeBeyond](https://github.com/Team-SeeBeyond)
 - [Belal Safy](https://www.kaggle.com/belalsafy)
